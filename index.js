@@ -10,7 +10,7 @@ var Spores = {
       var provider = Spores.getProvider()
       window.web3 = new Web3(provider)
       window.loomLoaded = true
-      callback()
+      callback(provider)
     }
   },
   getProvider: function () {
