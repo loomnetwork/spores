@@ -1,10 +1,22 @@
 import Web3 from 'web3'
 import Signer from 'ethjs-signer'
 import BN from 'bignumber.js'
+import axios from 'axios'
 
-module.exports = Spores;
+module.exports = spores;
 
-var Spores = {
+const getWallet = function (endpoint) {
+  var remoteEndpoint = endpoint ? endpoint : '/_loom/accounts'
+  axios.get(remoteEndpoint)
+    .then(function (keypairs) {
+      console.log(keypairs)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
+
+var spores = {
   init: function (callback) {
     if (typeof window !== 'undefined' && !window.loomLoaded) {
       var provider = Spores.getProvider()
@@ -12,6 +24,12 @@ var Spores = {
       window.loomLoaded = true
       callback(provider)
     }
+  },
+  getContractAddress: function () {
+
+  },
+  getWallet: function () {
+    getWallet()
   },
   getProvider: function () {
     var LoomProviderInstance = function () {}
