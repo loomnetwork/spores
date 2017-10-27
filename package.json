@@ -1,0 +1,31 @@
+{
+  "name": "loom-spores",
+  "version": "0.0.1",
+  "description": "Spores is Loom Network's all-in-one package which provides web3, wallet, and custom RPC provider. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loomnetwork/spores.git"
+  },
+  "keywords": [
+    "ethereum",
+    "loom",
+    "web3",
+    "jsonrpc"
+  ],
+  "author": "Loom Network",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loomnetwork/spores/issues"
+  },
+  "homepage": "https://github.com/loomnetwork/spores#readme",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "bignumber": "^1.1.0",
+    "eslint-plugin-html": "^2.0.3",
+    "ethjs-signer": "^0.1.1"
+  }
+}
