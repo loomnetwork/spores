@@ -3,8 +3,6 @@ import Signer from 'ethjs-signer'
 import BN from 'bignumber.js'
 import axios from 'axios'
 
-module.exports = spores;
-
 const getWallet = function (endpoint) {
   var remoteEndpoint = endpoint ? endpoint : '/_loom/accounts'
   axios.get(remoteEndpoint)
@@ -16,7 +14,7 @@ const getWallet = function (endpoint) {
     })
 }
 
-var spores = {
+export default {
   init: function (callback) {
     if (typeof window !== 'undefined' && !window.loomLoaded) {
       var provider = Spores.getProvider()
