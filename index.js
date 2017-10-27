@@ -118,9 +118,9 @@ export default {
     }
   },
   getContracts: function (api) {
-    getContracts(api)
+    return getContracts(api)
   },
   getWallet: function (api) {
-    getWallet(api)
+    return getWallet(api)
   },
 }
