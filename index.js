@@ -2,7 +2,17 @@ import Web3 from 'web3'
 import Signer from 'ethjs-signer'
 import BN from 'bignumber.js'
 
-export default {
+module.exports = Spores;
+
+var Spores = {
+  init: function (callback) {
+    if (typeof window !== 'undefined' && !window.loomLoaded) {
+      var provider = Spores.getProvider()
+      window.web3 = new Web3(provider)
+      window.loomLoaded = true
+      callback()
+    }
+  },
   getProvider: function () {
     var LoomProviderInstance = function () {}
     var remoteLoomProvider = new Web3.providers.HttpProvider('http://localhost:8081')

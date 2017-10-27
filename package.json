@@ -1,6 +1,6 @@
 {
   "name": "loom-spores",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Spores is Loom Network's all-in-one package which provides web3, wallet, and custom RPC provider. ",
   "main": "index.js",
   "scripts": {
