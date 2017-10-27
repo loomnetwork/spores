@@ -14,6 +14,17 @@ const getWallet = function (endpoint) {
     })
 }
 
+const getContracts = function (endpoint) {
+  var remoteEndpoint = endpoint ? endpoint : '/_loom/contracts'
+  return axios.post(remoteEndpoint)
+    .then(function (res) {
+      return res.data
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
+
 const getProvider = function (keys) {
   var LoomProviderInstance = function () {}
   var remoteLoomProvider = new Web3.providers.HttpProvider('http://localhost:8081')
@@ -106,8 +117,8 @@ export default {
       })
     }
   },
-  getContractAddress: function () {
-
+  getContracts: function (api) {
+    getContracts(api)
   },
   getWallet: function (api) {
     getWallet(api)
