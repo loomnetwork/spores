@@ -107,13 +107,14 @@ const getProvider = function (keys) {
 }
 
 export default {
-  init: function (callback, api) {
+  init: function (providerHandler, api, callback) {
     if (typeof window !== 'undefined' && !window.loomLoaded) {
       getWallet(api).then(function (keys) {
         var provider = getProvider(keys)
         window.web3 = new Web3(provider)
         window.loomLoaded = true
-        callback(provider)
+        providerHandler(provider)
+        callback()
       })
     }
   },
