@@ -27,7 +27,7 @@ const getContracts = function (endpoint) {
 
 const getProvider = function (keys) {
   var LoomProviderInstance = function () {}
-  var remoteLoomProvider = new Web3.providers.HttpProvider('http://localhost:8081')
+  var remoteLoomProvider = new Web3.providers.HttpProvider('/')
   var web3Remote = new Web3(remoteLoomProvider)
   var wallet = Object.keys(keys)[0]
   var privateKey = keys[wallet]
