@@ -30,7 +30,7 @@ const getProvider = function (keys) {
   var remoteLoomProvider = new Web3.providers.HttpProvider('/')
   var web3Remote = new Web3(remoteLoomProvider)
   var wallet = Object.keys(keys)[0]
-  var privateKey = `0x ${keys[wallet]}`
+  var privateKey = `0x${keys[wallet]}`
 
   LoomProviderInstance.prototype.prepareRequest = function (async) {
     return remoteLoomProvider.prepareRequest(async)
