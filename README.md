@@ -1,5 +1,7 @@
 # EthDeploy Spores - An all-in-one package to connect your client to your DApp on EthDeploy.
 
+Warning: EthDeploy infrastructure is only lightly maintained as we're lacking in development resources.
+
 Loom Spores is a self-contained web3, wallet, and JsonRPC provider to connect your client-side code with your DApp.
 
 Installation can't be simpler:
