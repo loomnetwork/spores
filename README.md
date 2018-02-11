@@ -13,7 +13,7 @@ npm i --save https://github.com/loomnetwork/spores.git
 
 Then in your app
 ```js
-import {default as Spores} from 'loom-spores'
+import {default as Spores} from 'ethdeploy-spores'
 
 //...in your application initalizer:
 
@@ -28,7 +28,7 @@ Spores will automatically include `web3.js` and also setup the correct JsonRPC p
 
 import axios from 'axios' //lightweight ajax library
 
-import {default as Spores} from 'loom-spores'
+import {default as Spores} from 'ethdeploy-spores'
 import {default as contract} from 'truffle-contract'
 
 var SampleContract = contract(contractJson)
